@@ -46,7 +46,7 @@ my_tea/
 | [项目概述](docs/overview.md) | 结构与概念 |
 | [API 参考](docs/api.md) | 公开 API 签名 |
 | [教程](docs/tutorial.md) | 从零入门 |
-| [速查](docs/tldr.md) | 语法与策略参考 |
+| [速查](docs/lean4_tldr.md) | 语法与策略参考 |
 
 ## 许可证
 

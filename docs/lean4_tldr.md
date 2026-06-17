@@ -662,7 +662,6 @@ import Mathlib
 | Mathlib 文档 | <https://leanprover-community.github.io/mathlib4_docs/> |
 | Lean 4 Playground | <https://live.lean-lang.org/> |
 | Lean 社区 Zulip | <https://leanprover.zulipchat.com/> |
-| Lean 4 标准库 API | `#print` / `#check` 可在 IDE 中直接使用 |
 
 ---
 
