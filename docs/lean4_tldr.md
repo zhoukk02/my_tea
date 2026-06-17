@@ -661,6 +661,7 @@ import Mathlib
 | Theorem Proving in Lean 4 | <https://lean-lang.org/theorem_proving_in_lean4/> |
 | Mathlib 文档 | <https://leanprover-community.github.io/mathlib4_docs/> |
 | Lean 4 Playground | <https://live.lean-lang.org/> |
+| Lean 社区 | <https://leanprover-community.github.io/> |
 | Lean 社区 Zulip | <https://leanprover.zulipchat.com/> |
 
 ---
