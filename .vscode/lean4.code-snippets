@@ -1,0 +1,343 @@
+{
+    "Lean 4 — def (函数定义)": {
+        "prefix": "def",
+        "body": [
+            "/-- ${1:description} -/",
+            "def ${2:name} (${3:args}) : ${4:Type} := ${5:expr}"
+        ],
+        "description": "定义一个函数或常量"
+    },
+    "Lean 4 — theorem (定理)": {
+        "prefix": "theorem",
+        "body": [
+            "/-- ${3:description} -/",
+            "theorem ${1:name} (${2:args}) : ${4:prop} := by",
+            "  ${5:tactic}"
+        ],
+        "description": "声明一个定理并用策略块证明"
+    },
+    "Lean 4 — lemma (引理)": {
+        "prefix": "lemma",
+        "body": [
+            "/-- ${3:description} -/",
+            "lemma ${1:name} (${2:args}) : ${4:prop} := by",
+            "  ${5:tactic}"
+        ],
+        "description": "声明一个引理"
+    },
+    "Lean 4 — inductive (归纳类型)": {
+        "prefix": "inductive",
+        "body": [
+            "/-- ${4:description} -/",
+            "inductive ${1:Name} (${2:params}) : ${3:Type} where",
+            "  | ${5:ctor1} : ${1:Name}",
+            "  | ${6:ctor2} : ${1:Name}"
+        ],
+        "description": "定义归纳类型（代数数据类型）"
+    },
+    "Lean 4 — structure (结构体)": {
+        "prefix": "structure",
+        "body": [
+            "/-- ${5:description} -/",
+            "structure ${1:Name} (${2:params}) where",
+            "  ${3:field} : ${4:Type}",
+            "  deriving ${6|Repr,DecidableEq,BEq,Hashable|}"
+        ],
+        "description": "定义结构体"
+    },
+    "Lean 4 — match (模式匹配)": {
+        "prefix": "match",
+        "body": [
+            "match ${1:expr} with",
+            "  | ${2:pattern} => ${3:result}"
+        ],
+        "description": "模式匹配表达式"
+    },
+    "Lean 4 — if-then-else": {
+        "prefix": "if",
+        "body": [
+            "if ${1:cond} then ${2:thenExpr} else ${3:elseExpr}"
+        ],
+        "description": "条件表达式"
+    },
+    "Lean 4 — let (局部绑定)": {
+        "prefix": "let",
+        "body": [
+            "let ${1:name} := ${2:value}",
+            "${3:body}"
+        ],
+        "description": "局部绑定"
+    },
+    "Lean 4 — have (假设)": {
+        "prefix": "have",
+        "body": [
+            "have ${1:h} : ${2:prop} := by",
+            "  ${3:proof}",
+            "${4:rest}"
+        ],
+        "description": "在证明中引入一个中间假设"
+    },
+    "Lean 4 — calc (等式链)": {
+        "prefix": "calc",
+        "body": [
+            "calc",
+            "  ${1:a} = ${2:b} := by ${3:proof1}",
+            "  _ = ${4:c} := by ${5:proof2}"
+        ],
+        "description": "链式等式推导"
+    },
+    "Lean 4 — by (策略块)": {
+        "prefix": "by",
+        "body": [
+            "by",
+            "  ${1:tactic}"
+        ],
+        "description": "进入策略模式"
+    },
+    "Lean 4 — namespace (命名空间)": {
+        "prefix": "namespace",
+        "body": [
+            "namespace ${1:Name}",
+            "",
+            "${2:content}",
+            "",
+            "end ${1:Name}"
+        ],
+        "description": "定义命名空间"
+    },
+    "Lean 4 — open (打开命名空间)": {
+        "prefix": "open",
+        "body": [
+            "open ${1:Namespace}"
+        ],
+        "description": "打开命名空间"
+    },
+    "Lean 4 — section (段落)": {
+        "prefix": "section",
+        "body": [
+            "section ${1:name}",
+            "",
+            "${2:content}",
+            "",
+            "end ${1:name}"
+        ],
+        "description": "定义段落"
+    },
+    "Lean 4 — #eval (求值)": {
+        "prefix": "#eval",
+        "body": [
+            "#eval ${1:expr}"
+        ],
+        "description": "计算并打印表达式结果"
+    },
+    "Lean 4 — #check (类型检查)": {
+        "prefix": "#check",
+        "body": [
+            "#check ${1:expr}"
+        ],
+        "description": "显示表达式的类型"
+    },
+    "Lean 4 — #reduce (归约)": {
+        "prefix": "#reduce",
+        "body": [
+            "#reduce ${1:expr}"
+        ],
+        "description": "将表达式归约到范式"
+    },
+    "Lean 4 — example (示例)": {
+        "prefix": "example",
+        "body": [
+            "example : ${1:prop} := by",
+            "  ${2:tactic}"
+        ],
+        "description": "内联示例证明"
+    },
+    "Lean 4 — 策略：simp": {
+        "prefix": "simp",
+        "body": [
+            "simp [${1:lemma}]"
+        ],
+        "description": "简化目标"
+    },
+    "Lean 4 — 策略：rw (重写)": {
+        "prefix": "rw",
+        "body": [
+            "rw [${1:eq_lemma}]"
+        ],
+        "description": "利用等式重写目标"
+    },
+    "Lean 4 — 策略：apply (应用)": {
+        "prefix": "apply",
+        "body": [
+            "apply ${1:theorem}"
+        ],
+        "description": "应用定理到目标"
+    },
+    "Lean 4 — 策略：constructor (构造)": {
+        "prefix": "constructor",
+        "body": [
+            "constructor",
+            "  · ${1:left_proof}",
+            "  · ${2:right_proof}"
+        ],
+        "description": "拆分 ∧ 或 ∨ 目标"
+    },
+    "Lean 4 — 策略：cases (分情况)": {
+        "prefix": "cases",
+        "body": [
+            "cases ${1:h} with",
+            "  | ${2:ctor1} => ${3:proof}",
+            "  | ${4:ctor2} => ${5:proof}"
+        ],
+        "description": "分情况讨论策略"
+    },
+    "Lean 4 — 策略：induction (归纳法)": {
+        "prefix": "induction",
+        "body": [
+            "induction ${1:h} with",
+            "  | ${2:base} => ${3:proof}",
+            "  | ${4:step} ${5:ih} => ${6:proof}"
+        ],
+        "description": "归纳法策略"
+    },
+    "Lean 4 — 策略：by_contra (反证法)": {
+        "prefix": "by_contra",
+        "body": [
+            "by_contra ${1:h}",
+            "  ${2:proof}"
+        ],
+        "description": "反证法策略"
+    },
+    "Lean 4 — show (类型标注)": {
+        "prefix": "show",
+        "body": [
+            "show ${1:type} from",
+            "  ${2:proof}"
+        ],
+        "description": "显式标注当前目标的类型"
+    },
+    "Lean 4 — 策略：omega (线性算术)": {
+        "prefix": "omega",
+        "body": [
+            "omega"
+        ],
+        "description": "求解线性算术目标"
+    },
+    "Lean 4 — 策略：native_decide (自动判定)": {
+        "prefix": "native_decide",
+        "body": [
+            "native_decide"
+        ],
+        "description": "自动判定可判定的命题"
+    },
+    "Lean 4 — class (类型类)": {
+        "prefix": "class",
+        "body": [
+            "/-- ${3:description} -/",
+            "class ${1:Name} (${2:α : Type u}) where",
+            "  ${4:field} : ${5:Type}",
+            "",
+            "/-- ${7:description} -/",
+            "instance : ${1:Name} ${6:type} where",
+            "  ${4:field} := ${8:value}"
+        ],
+        "description": "定义类型类及其实例"
+    },
+    "Lean 4 — instance (实例)": {
+        "prefix": "instance",
+        "body": [
+            "instance : ${1:ClassName} ${2:type} where",
+            "  ${3:field} := ${4:value}"
+        ],
+        "description": "定义类型类实例"
+    },
+    "Lean 4 — haveI (类型类实例假设)": {
+        "prefix": "haveI",
+        "body": [
+            "haveI : ${1:Class} ${2:type} := ${3:instance}"
+        ],
+        "description": "添加一个类型类实例作为假设（实例隐式可用）"
+    },
+    "Lean 4 — deriving (派生)": {
+        "prefix": "deriving",
+        "body": [
+            "deriving ${1|Repr,DecidableEq,BEq,Hashable,Ord,Inhabited|}"
+        ],
+        "description": "派生类型类实例"
+    },
+    "Lean 4 — IO (主入口 + 打印)": {
+        "prefix": "main",
+        "body": [
+            "/-- ${3:description} -/",
+            "def main : IO Unit := do",
+            "  ${1:IO.println s!\"${2:message}\"}"
+        ],
+        "description": "程序入口点（do 记法）"
+    },
+    "Lean 4 — IO do 记法": {
+        "prefix": "do",
+        "body": [
+            "do",
+            "  ${1:action1}",
+            "  ${2:action2}"
+        ],
+        "description": "do 记法块"
+    },
+    "Lean 4 — 模块头 (完整)": {
+        "prefix": "module",
+        "body": [
+            "/-",
+            "Copyright (c) ${1:2026}. All rights reserved.",
+            "Released under the LICENSE file.",
+            "Authors: <${2:your name}>",
+            "-/",
+            "",
+            "import ${3:Library}",
+            "",
+            "/-!",
+            "# ${4:ModuleName}",
+            "",
+            "${5:description}",
+            "-/",
+            "",
+            "namespace ${6:Namespace}",
+            "",
+            "$0",
+            "",
+            "end ${6:Namespace}"
+        ],
+        "description": "完整的模块文件模板"
+    },
+    "Lean 4 — rec (递归函数)": {
+        "prefix": "defrec",
+        "body": [
+            "/-- ${4:description} -/",
+            "def ${1:name} (${2:args}) : ${3:type} :=",
+            "  match ${5:arg} with",
+            "  | ${6:base_case} => ${7:result}",
+            "  | ${8:rec_case} => ${1:name} ${9:rec_call}"
+        ],
+        "description": "递归函数定义"
+    },
+    "Lean 4 — mutual (互递归)": {
+        "prefix": "mutual",
+        "body": [
+            "mutual",
+            "  /-- ${4:description} -/",
+            "  def ${1:foo} (${2:args}) : ${3:type} := ${5:expr}",
+            "",
+            "  /-- ${8:description} -/",
+            "  def ${6:bar} (${7:args}) : ${3:type} := ${9:expr}",
+            "end"
+        ],
+        "description": "互递归定义"
+    },
+    "Lean 4 — partial (偏函数)": {
+        "prefix": "partial",
+        "body": [
+            "/-- ${4:description} -/",
+            "partial def ${1:name} (${2:args}) : ${3:type} := ${5:expr}"
+        ],
+        "description": "偏函数定义（可能不终止）"
+    }
+}
